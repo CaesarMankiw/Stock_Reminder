@@ -35,7 +35,7 @@ button:disabled {
 }
 
 .app-shell {
-  width: min(1720px, calc(100% - 32px));
+  width: min(1880px, calc(100% - 40px));
   margin: 0 auto;
   padding: 22px 0 36px;
 }
@@ -184,8 +184,8 @@ label {
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr) 390px;
-  gap: 14px;
+  grid-template-columns: minmax(260px, 320px) minmax(640px, 1fr) minmax(320px, 360px);
+  gap: 18px;
   align-items: start;
 }
 
@@ -194,17 +194,26 @@ label {
 .side-column {
   display: grid;
   gap: 14px;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
+  align-self: start;
 }
 
 .left-column {
   align-content: start;
 }
 
+.main-column {
+  overflow: hidden;
+}
+
 .surface {
   border: 1px solid #d7e0ea;
   border-radius: 8px;
   background: #ffffff;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .asset-list,
@@ -408,6 +417,7 @@ dd {
 
 .chart-wrap {
   width: 100%;
+  max-width: 100%;
   height: 320px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -590,7 +600,7 @@ dd {
   color: #b42318;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1600px) {
   .dashboard-grid {
     grid-template-columns: 280px minmax(0, 1fr);
   }
@@ -601,7 +611,7 @@ dd {
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   .top-bar {
     flex-direction: column;
   }
