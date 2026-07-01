@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>local.stock-reminder.alert-check</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/liuxiang/Programme/Self_Play/Stock_Reminder</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/liuxiang/Programme/Self_Play/Stock_Reminder/scripts/run_daily_sync.sh</string>
+    <string>alerts</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>DATABASE_PATH</key>
+    <string>/Users/liuxiang/Programme/Self_Play/Stock_Reminder/backend/data/stock_reminder.sqlite3</string>
+    <key>LOG_DIR</key>
+    <string>/Users/liuxiang/Programme/Self_Play/Stock_Reminder/logs</string>
+  </dict>
+
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Hour</key>
+      <integer>10</integer>
+      <key>Minute</key>
+      <integer>0</integer>
+    </dict>
+    <dict>
+      <key>Hour</key>
+      <integer>18</integer>
+      <key>Minute</key>
+      <integer>45</integer>
+    </dict>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/Users/liuxiang/Programme/Self_Play/Stock_Reminder/logs/launchd-alert-check.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/liuxiang/Programme/Self_Play/Stock_Reminder/logs/launchd-alert-check.err.log</string>
+</dict>
+</plist>
